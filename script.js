@@ -20,4 +20,15 @@ function generateQr() {
   }
 }
 
+async function downloadQr(){
+    const response = await fetch(img.src);
+    const blob = await response.blob();
+    const downloadLink = document.createElement('a');
+    downloadLink.href=URL.createObjectURL(blob);
+    downloadLink.download="Qr.jpeg";
+    downloadLink.click();
+}
+
+dwn.addEventListener('click',downloadQr);
+
 btn.addEventListener('click', generateQr);
