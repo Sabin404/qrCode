@@ -1,6 +1,7 @@
 const inputValue = document.querySelector('#inputValue');
 const img = document.querySelector('.image');
 const btn = document.querySelector('.btn');
+const dwn = document.querySelector('.dwn');
 let p = document.querySelector('p');
 
 function generateQr() {
